@@ -1,3 +1,11 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+input,
+form {
+  text-align: center;
+}
+.newstudent {
+  background-color: lightgrey;
+}
