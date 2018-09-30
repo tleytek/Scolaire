@@ -3,9 +3,18 @@
 }
 
 input,
+label,
 form {
   text-align: center;
 }
 .newstudent {
   background-color: lightgrey;
+}
+.jumbotron {
+  background-size: cover;
+  background-position: center center;
+}
+
+h1 {
+  text-align: center;
 }
