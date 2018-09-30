@@ -2,8 +2,6 @@
   line-height: 2.5;
 }
 
-input,
-label,
 form {
   text-align: center;
 }
@@ -17,4 +15,7 @@ form {
 
 h1 {
   text-align: center;
+}
+.newstaff {
+  background-color: lightcoral;
 }

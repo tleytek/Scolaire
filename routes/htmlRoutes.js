@@ -27,6 +27,11 @@ module.exports = function(app) {
     res.render('newstudent');
   });
 
+  // Render new staff member page
+  app.get('/newstaff', function(req, res) {
+    res.render('newstaff');
+  });
+
   // Render 404 page for any unmatched routes
   app.get('*', function(req, res) {
     res.render('404');
