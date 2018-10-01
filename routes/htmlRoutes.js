@@ -11,9 +11,20 @@ module.exports = function(app) {
     });
   });
 
+  //Load the teachers view page
+  app.get("/teachersView", function(req, res) {
+    db.Teacher.findAll({}).then(function(dbTeachers) {
+      res.render("teacher", {
+        teachers: dbTeachers
+      });
+    });
+  });
+
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
       res.render("example", {
         example: dbExample
       });

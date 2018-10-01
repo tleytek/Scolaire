@@ -3,8 +3,14 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all teachers
   app.get("/api/students", function(req, res) {
+    var query = {};
+    if (req.query.author_id) {
+      query.AuthorId = req.query.author_id;
+    }
     // Sequelize query to find all teachers, followed by a promise
-    db.Student.findAll({}).then(function(dbStudent) {
+    db.Student.findAll({
+      where: query
+    }).then(function(dbStudent) {
       res.json(dbStudent);
     });
   });
