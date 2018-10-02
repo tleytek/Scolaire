@@ -23,15 +23,15 @@ module.exports = function(app) {
       res.json(dbTeacher);
     });
   });
-};
 
-// PUT route for updating students
-app.put("/api/teachers", function(req, res) {
-  db.Teacher.update(req.body, {
-    where: {
-      id: req.body.id
-    }
-  }).then(function(dbTeacher) {
-    res.json(dbTeacher);
+  // PUT route for updating students
+  app.put("/api/teachers", function(req, res) {
+    db.Teacher.update(req.body, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbTeacher) {
+      res.json(dbTeacher);
+    });
   });
-});
+};

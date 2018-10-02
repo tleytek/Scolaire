@@ -30,15 +30,15 @@ module.exports = function(app) {
       res.json(dbStudent);
     });
   });
-};
 
-// PUT route for updating posts
-app.put("/api/students", function(req, res) {
-  db.Student.update(req.body, {
-    where: {
-      id: req.body.id
-    }
-  }).then(function(dbStudent) {
-    res.json(dbStudent);
+  // PUT route for updating posts
+  app.put("/api/students", function(req, res) {
+    db.Student.update(req.body, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbStudent) {
+      res.json(dbStudent);
+    });
   });
-});
+};
