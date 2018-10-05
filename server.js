@@ -23,6 +23,7 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
+require("./routes/htmlRoutes")(app);
 require("./routes/student-api-routes")(app);
 require("./routes/teacher-api-routes")(app);
 
