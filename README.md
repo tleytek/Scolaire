@@ -4,39 +4,39 @@ Scolaire is a school management app. The app maintains a list of teachers and st
 
 ## As a user we can create one of the 3 types of profiles:
 
-Secretary
-Teacher
-Parent
+- Secretary
+- Teacher
+- Parent
 
 ## As a secretary the user can do the below tasks:
 
-Create a teacher profile
-View and Edit Announcements
-View and Edit Events
-View Teachers List
-View Students List
+- Create a teacher profile
+- View and Edit Announcements
+- View and Edit Events
+- View Teachers List
+- View Students List
 
 ## As a Teacher the user can do the below tasks:
 
-Create a student profile
-View and Edit Announcements
-View and Edit Events
-View Students List
-Update Student marks
+- Create a student profile
+- View and Edit Announcements
+- View and Edit Events
+- View Students List
+- Update Student marks
 
 ## As a parent the user can do the below tasks:
 
-View the Class Announcements
-View the Class Events
-View the students marks
+- View the Class Announcements
+- View the Class Events
+- View the students marks
 
 ## Tools / Technologies used:
 
-HTML
-CSS
-JavaScript
-Jquery
-MySQL
-NodeJS
-Express
-Sequelize
+- HTML
+- CSS
+- JavaScript
+- Jquery
+- MySQL
+- NodeJS
+- Express
+- Sequelize
