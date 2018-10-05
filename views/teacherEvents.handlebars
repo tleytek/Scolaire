@@ -1,0 +1,35 @@
+<div class="container text-center justify-content-center">
+    <div id="BulletinBoard">
+        <h1 class="text-center"> Welcome to Mr Grisson's class bulletin board</h1>
+        <h1>
+            School Events
+        </h1>
+
+        <ul>
+            {{#each events}}
+            <li>{{this.text}}</li>
+            {{/each}}
+        </ul>
+        <button type="button" class="btn btn-primary addnewevent">Add New Event</button>
+
+        <div class="modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add New Event</h5>
+                    </div>
+                    <div class="modal-body">
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/teachers.js"></script>
