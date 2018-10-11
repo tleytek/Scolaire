@@ -60,18 +60,5 @@ module.exports = function(sequelize, DataTypes) {
       null
     );
   });
-
-  // User.hook('afterCreate', function(user) {
-  //   if (user.role === 1) {
-  //     user.password = bcrypt.hashSync(
-  //       user.password,
-  //       bcrypt.genSaltSync(12),
-  //       null
-  //     );
-  //     console.log('User IS admin, so needed to bcrypt AFTER');
-  //   } else {
-  //     console.log('User not admin, so no need to bcrypt AFTER');
-  //   }
-  // });
   return User;
 };
