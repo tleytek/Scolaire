@@ -1,0 +1,50 @@
+{{!-- <div>
+    <form class="clearfix mb-4">
+        <h3>Add a new STAFF member:</h3>
+        <br>
+        <div class="form-group col-6 offset-3">
+            <label for="teacherName">Teacher Member Name</label>
+            <input type="text" id="teacherName" class="form-control" aria-describedby="teacherName" placeholder="Enter Teacher Name">
+        </div>
+        <br>
+        <div class="form-group col-6 offset-3">
+            <label for="teacher-description">Teacher Member Role</label>
+            <textarea class="form-control" id="teacher-description" aria-describedby="teacher-description" placeholder="Enter teacher member job role"></textarea>
+        </div>
+        <button id="submit" class="btn btn-primary align-center">Submit</button>
+        <br>
+    </form>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/newTeacher.js"></script> --}}
+
+<div id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h2>This is our Home Page!</h2>
+                <form class="clearfix mb-4" action="POST">
+                    <div class="form-group">
+                        <label for="teacher-name">Teacher Name</label>
+                        <input type="text" id="teacher-name" class="form-control" aria-describedby="teacher-name"
+                            placeholder="Enter Teacher Name">
+                    </div>
+                    <button id="submit" class="btn btn-primary float-right">Submit</button>
+                </form>
+                <h3>Teacher:</h3>
+                <ul id="teacher-list" class="list-group">
+                    {{#each teacher}}
+                    <li data-id="{{this.id}}" class="list-group-item">
+                        <a href="teacher/{{this.id}}">{{this.teacherName}}</a>
+                        <button class="btn btn-danger float-right delete">ｘ</button>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!--
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
+<script src="/js/teachers.js"></script>
