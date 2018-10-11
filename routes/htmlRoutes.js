@@ -1,19 +1,18 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Load index page
-  app.get("/index", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
-  });
-
   //Load landing page
   app.get("/", function(req, res) {
     res.render("landing");
+  });
+
+  // Load index page
+  app.get("/dashboard", function(req, res) {
+    db.Student.findAll({}).then(function(dbStudents) {
+      res.render("Dashboard", {
+        student: dbStudents
+      });
+    });
   });
 
   app.get("/teachers", function(req, res) {
