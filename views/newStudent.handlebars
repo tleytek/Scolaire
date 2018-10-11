@@ -1,0 +1,44 @@
+{{!-- <div class="newstudent">
+    <form class="clearfix mb-4" action="POST">
+        <h3>Add a new student:</h3>
+        <div class="form-group col-6 offset-3">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" class="form-control" aria-describedby="studentName" placeholder="Enter Student Name">
+        </div>
+        <br>
+        <div class="form-group col-6 offset-3">
+            <label for="teacherName">Teacher Last Name</label>
+            <textarea class="form-control" id="teacherName" aria-describedby="teacherName" placeholder="Enter Teacher Name"></textarea>
+        </div>
+        <button id="submit" class="btn btn-primary align-center">Submit</button>
+    </form>
+</div>
+<script src="/js/student.js"></script> --}}
+
+<div id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h1>{{msg}}</h1>
+                <h2>This is our Home Page!</h2>
+                <form class="clearfix mb-4" action="POST">
+                    <div class="form-group">
+                        <input type="text" id="student-name" class="form-control" aria-describedby="student-name"
+                            placeholder="Enter Student Name">
+                    </div>
+                    <button id="submit" class="btn btn-primary float-right">Submit</button>
+                </form>
+                <h3>Examples:</h3>
+                <ul id="student-list" class="list-group">
+                    {{#each students}}
+                    <li data-id="{{this.id}}" class="list-group-item">
+                        <a href="student/{{this.id}}">{{this.studentName}}</a>
+                        <button class="btn btn-danger float-right delete">ｘ</button>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/student.js"></script>
