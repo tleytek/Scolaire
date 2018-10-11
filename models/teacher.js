@@ -1,6 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   var Teacher = sequelize.define("Teacher", {
-    teacherName: DataTypes.STRING
+    teacherName: DataTypes.STRING,
+    dummyData: DataTypes.STRING
   });
 
   Teacher.associate = function(models) {
