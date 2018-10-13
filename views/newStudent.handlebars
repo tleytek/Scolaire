@@ -31,7 +31,8 @@
                 <h3>Examples:</h3>
                 <ul id="student-list" class="list-group">
                     {{#each students}}
-                    <li data-id="{{this.id}}" class="list-group-item">
+                    <li {{!-- data-id="{{this.id}}"  --}}
+                    class=" list-group-item">
                         <a href="student/{{this.id}}">{{this.studentName}}</a>
                         <button class="btn btn-danger float-right delete">ｘ</button>
                     </li>
